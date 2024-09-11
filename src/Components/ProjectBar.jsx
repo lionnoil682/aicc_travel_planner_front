@@ -17,7 +17,7 @@ const TravelProjectList = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/get_project_data/${authData.user_idx}`
+          `https://travel-planner-back.aicclionnoil.co.kr/get_project_data/${authData.user_idx}`
         );
         console.log('API Response:', response);
         setGetTravelData(response.data);

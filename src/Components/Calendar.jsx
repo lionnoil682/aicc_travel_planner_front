@@ -61,9 +61,13 @@ const Calendar = () => {
 
     // POST 요청으로 선택된 날짜를 서버에 전송
     axios
-      .post('http://localhost:8080/post_calendar', dataToSend, {
-        headers: { 'Content-Type': `application/json` },
-      })
+      .post(
+        'https://travel-planner-back.aicclionnoil.co.kr/post_calendar',
+        dataToSend,
+        {
+          headers: { 'Content-Type': `application/json` },
+        }
+      )
       .then((response) => {
         navigate('/createplanner'); // 성공적으로 저장된 후에 페이지 이동
       })

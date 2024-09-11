@@ -29,7 +29,7 @@ const Register = () => {
 
     try {
       const { status } = await axios.post(
-        'http://localhost:8080/register',
+        'https://travel-planner-back.aicclionnoil.co.kr/register',
         values
       );
 

@@ -28,7 +28,7 @@ const Login = () => {
 
     try {
       const { data, status } = await axios.post(
-        'http://localhost:8080/login',
+        'https://travel-planner-back.aicclionnoil.co.kr/login',
         values
       );
 

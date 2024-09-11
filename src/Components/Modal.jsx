@@ -106,7 +106,7 @@ const Modal = ({ handleSave }) => {
       formData.append('planner_img', planner_data.planner_img);
 
       const response = await axios.patch(
-        `http://localhost:8080/patch_travel_data/${project_idx}`,
+        `https://travel-planner-back.aicclionnoil.co.kr/patch_travel_data/${project_idx}`,
         formData,
         {
           headers: {

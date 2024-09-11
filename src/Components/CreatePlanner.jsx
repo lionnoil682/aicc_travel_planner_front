@@ -22,7 +22,7 @@ const Createplanner = () => {
     const fetchCalendarData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/get_calendar_date/${authData.user_idx}`
+          `https://travel-planner-back.aicclionnoil.co.kr/get_calendar_date/${authData.user_idx}`
         );
         if (response.data && response.data.length > 0) {
           const { project_idx, start_date, end_date } = response.data[0];
@@ -66,12 +66,15 @@ const Createplanner = () => {
     }
 
     try {
-      await axios.patch('http://localhost:8080/update_planner_title', {
-        project_idx: projectIdx,
-        project_title: projectTitle,
-        start_date: startDate,
-        end_date: endDate,
-      });
+      await axios.patch(
+        'https://travel-planner-back.aicclionnoil.co.kr/update_planner_title',
+        {
+          project_idx: projectIdx,
+          project_title: projectTitle,
+          start_date: startDate,
+          end_date: endDate,
+        }
+      );
       navigate(`/planner/${projectIdx}`);
     } catch (error) {
       console.error('Error updating project:', error);
@@ -95,7 +98,7 @@ const Createplanner = () => {
     if (handleMain)
       try {
         await axios.delete(
-          `http://localhost:8080/delete_travel_data/${authData.user_idx}/${projectIdx}`
+          `https://travel-planner-back.aicclionnoil.co.kr/delete_travel_data/${authData.user_idx}/${projectIdx}`
         );
 
         navigate('/');
