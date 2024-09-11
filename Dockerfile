@@ -1,5 +1,5 @@
 # Build React App
-FROM node:alpine3.18 as budockild
+FROM node:alpine3.18 as build
 WORKDIR /app
 COPY package.json .
 RUN npm install
@@ -13,4 +13,4 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 COPY --from=build /app/build .
 EXPOSE 80
-ENTRYPOINT [ "6", "-g", "daemon off;" ]
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
