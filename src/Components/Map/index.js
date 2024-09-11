@@ -12,7 +12,7 @@ const index = () => {
         <div className="flex items-start justify-center mt-20">
           <div className="w-full flex">
             <Sidebar />
-            {/* <GoogleMapComponent /> */}
+            <GoogleMapComponent />
           </div>
         </div>
       </div>
