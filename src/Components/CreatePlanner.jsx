@@ -41,7 +41,7 @@ const Createplanner = () => {
   const subtractOneDay = (dateStr) => {
     if (!dateStr) return '';
     const date = new Date(dateStr);
-    date.setDate(date.getDate() + 1);
+    date.setDate(date.getDate());
     return date.toISOString().split('T')[0];
   };
 
