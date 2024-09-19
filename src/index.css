@@ -183,3 +183,44 @@ body {
     margin-top: 12px;
   }
 }
+
+@media (max-width: 400px) {
+  .project_middle {
+    flex-direction: column;
+    width: full;
+  }
+}
+
+@media (max-width: 400px) {
+  .project_name_box {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .calender_page_middle {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .calender_wrapper {
+    margin-left: 6px;
+    width: 82%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .calander_button_container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .calander_button_wrapper {
+    justify-content: center;
+    align-items: center;
+    padding-right: 28px;
+  }
+}

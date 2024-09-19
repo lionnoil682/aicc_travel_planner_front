@@ -1,0 +1,48 @@
+@media (max-width: 400px) {
+  .rdrCalendarWrapper {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrMonth {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrDateDisplayWrapper {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrMonthAndYearWrapper {
+    width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrNextPrevButton {
+    margin: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrDateDisplayItem {
+    font-size: small;
+  }
+}
+
+@media (max-width: 400px) {
+  .rdrMonthAndYearPickers {
+    font-weight: 200;
+    font-size: smaller;
+  }
+}
+
+/* @media (max-width: 400px) */
+/* @media (max-width: 400px) */
+/* @media (max-width: 400px) */
+/* @media (max-width: 400px) */
+/* @media (max-width: 400px) */

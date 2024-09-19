@@ -8,7 +8,7 @@ const TravelProject = () => {
   return (
     <div className="flex flex-col h-screen ">
       <Navbar />
-      <div className="flex p-4">
+      <div className="project_middle flex p-4">
         <Projectbar />
         <Favorite />
       </div>

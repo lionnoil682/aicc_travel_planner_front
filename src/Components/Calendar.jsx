@@ -6,6 +6,7 @@ import 'react-date-range/dist/theme/default.css'; // DateRangePicker의 테마 C
 import { useNavigate, useParams } from 'react-router-dom';
 import ko from 'date-fns/locale/ko'; // 한국어 로케일 가져오기
 import { useSelector } from 'react-redux';
+import './customDateRange.css';
 
 const Calendar = () => {
   const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate 훅
@@ -77,26 +78,26 @@ const Calendar = () => {
   };
 
   return (
-    <div className="w-3/5 h-[80%] flex flex-col justify-center items-center">
-      <div className="w-[70%] h-[90%] bg-slate-200 p-4 rounded shadow-lg flex mr-4 border border-gray-400">
+    <div className="lg:w-3/5 h-[80%] flex flex-col justify-center items-center ">
+      <div className="calender_wrapper lg:w-[70%] h-[90%] bg-slate-200 p-4 rounded shadow-lg flex mr-4 border border-gray-400 ">
         {loading ? (
           <div>Loading...</div> // 로딩 중일 때 표시되는 메시지
         ) : (
-          <div className="h-full flex justify-center items-center mb-4 pl-4">
+          <div className="calender_wrapper h-full flex justify-center items-center mb-4 pl-4">
             <DateRangePicker
               ranges={[selectionRange]} // 선택된 날짜 범위를 설정
               onChange={handleSelect} // 날짜 선택 시 호출되는 함수
-              className="w-full h-[90%] custom-calendar"
+              className="w-full h-[90%] custom-calendar "
               staticRanges={[]} // 프리셋 범위 비활성화
               inputRanges={[]} // 입력 범위 비활성화
               locale={ko} // DateRangePicker의 로케일을 한국어로 설정
             />
           </div>
         )}
-        <div className="mt- mr-1">
+        <div className="calander_button_wrapper w-full mb-4  flex items-end justify-end">
           <button
             onClick={handleSaveDates}
-            className="bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700 ml-6"
+            className="calander_button_container bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700 ml-6"
           >
             날짜 선택
           </button>
