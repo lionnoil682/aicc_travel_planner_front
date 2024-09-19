@@ -25,6 +25,14 @@ module.exports = {
         '10xl': '10rem', // 160px
         '11xl': '12rem', // 192px
       },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+        i13: '380px', // iPhone 13 Pro 기준
+      },
     },
   },
   plugins: [],

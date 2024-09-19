@@ -7,32 +7,32 @@ import { PiAirplaneTiltLight } from 'react-icons/pi';
 
 const Footer = () => {
   return (
-    <div className="footer bg-slate-100 border-2 px-3 py-4 leading-[1.75rem] flex justify-between items-center">
-      <div className="flex flex-col justify-center">
-        <div className="footer-logo flex mb-5 items-center">
+    <div className="footer_wrapper bg-slate-100 border-2 px-3 py-4 leading-[1.75rem] flex items-center ">
+      <div className="flex flex-col justify-center w-full">
+        <div className="footer-logo flex mb-5 items-center ">
           <PiAirplaneTiltLight
             className="from-gray-700 to-gray-900 mr-1"
             size="20"
             style={{ fontSize: '1rem' }}
           />
-          <div className="text-base font-semibold font-montserrat">
+          <div className="text-base font-semibold font-montserrat ">
             My Travel Planner
           </div>
         </div>
         <div
-          className="text text-center w-full flex mb-5 "
+          className="footer_text text-center w-full flex mb-5 "
           style={{ marginRight: '0%' }}
         >
           <div className="Corporation text-xs ">
             주식회사 마이 트레블 플레너
           </div>
-          <div className="Corporation text-xs">
+          <div className="Corporation text-xs ">
             사업자 등록번호 123-45-67891
           </div>
-          <div className="Corporation text-xs">
+          <div className="Corporation text-xs ">
             서울시 금천구 가산디지털로2로 144 20F
           </div>
-          <div className="Corporation text-xs">
+          <div className="Corporation text-xs ">
             Copyright My Planner Travel. All Rights Reserved.
           </div>
         </div>
@@ -45,8 +45,8 @@ const Footer = () => {
           <div className="Corporation text-xs hover:underline">1:1 문의</div>
         </div>
       </div>
-      <div className="icons_wrapper p-2 ml-2 flex-shrink-0">
-        <div className="icons_container p-2 flex gap-3">
+      <div className="icons_wrapper p-2 mr-8 flex-shrink-0 ">
+        <div className="icons_container p-2 flex gap-3 ">
           <MdOutlineMailOutline className="w-5 h-5" />
           <FaFacebookSquare className="w-5 h-5" />
           <FaInstagram className="w-5 h-5" />

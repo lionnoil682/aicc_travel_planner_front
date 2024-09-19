@@ -1,8 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 * {
   margin: 0;
@@ -12,18 +10,15 @@
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  color: #1f2937; /* Tailwind의 text-gray-600에 해당 */
+  color: #1f2937;
 }
-
 
 .App {
   height: 100vh;
   width: 100%;
 }
-
 
 .Sign_up,
 .Sign_in,
@@ -33,28 +28,15 @@ body {
   font-weight: 600;
 }
 
-
-.Page_container {
-  padding: 0.5 rem; /* p-2 */
-  margin-bottom: 0.25rem; /* mb-1 */
-}
-
-
 .Page_wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0.5rem; /* px-2 py-2 */
   border-bottom: 1px solid rgba(75, 85, 99, 0.5);
 }
-
 
 .Logo {
   border-radius: 0.5rem; /* rounded-lg */
   padding: 0.5rem; /* p-2 */
   margin: 0.25rem; /* m-1 */
-  margin-top: 0.75rem; /* mt-3 */
 }
-
 
 .Logo_image {
   display: flex;
@@ -63,33 +45,20 @@ body {
   align-items: center;
 }
 
-
 .Logo_image_svg {
   width: 2rem; /* w-5 */
   height: 2rem; /* h-7 */
 }
-
 
 .Logo_text {
   font-size: 1.6rem; /* text-l */
   font-weight: 600; /* font-semibold */
 }
 
-
 .Sign_box_container {
   display: flex;
-  gap: 0.75rem; /* gap-3 */
   padding: 0.5rem; /* p-2 */
-  margin-top: 0.75rem; /* mt-3 */
 }
-
-
-.Sign_box_wrapper {
-  display: flex;
-  gap: 0.75rem; /* gap-3 */
-  margin-right: 2.5rem; /* mr-10 */
-}
-
 
 .Sign_up,
 .Sign_in {
@@ -164,7 +133,7 @@ body {
   color: #868e96;
 }
 
-.textarea::placeholder{
+.textarea::placeholder {
   text-align: center;
 }
 
@@ -187,4 +156,30 @@ body {
   min-height: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 400px) {
+  .adimg_box {
+    max-width: 300px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer_wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer_text {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .icons_wrapper {
+    margin-top: 12px;
+  }
 }

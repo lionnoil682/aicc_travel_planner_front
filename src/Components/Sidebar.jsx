@@ -21,21 +21,22 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="Sidebar_container w-2/5 mr-1 flex flex-col">
-      <div className="Introduce p-1 h-1/3">
-        <p className="Introduce_wrapper text-center border-2 border-white m-1 p-3 flex flex-col">
-          <span className="Introduce_title text-7xl border-2 border-white mt-8 p-1 font-bold font-gothicA1">
+    <div className="Sidebar_container  lg:w-2/5 mr-1 flex flex-col justify-evenly ">
+      <div className="Introduce p-1 h-1/3 ">
+        <p className="Introduce_wrapper text-center border-2 border-white lg:m-1 p-3 flex flex-col gap">
+          <span className="Introduce_title lg:text-7xl i13:text-3xl border-2 border-white p-1 font-bold font-gothicA1">
             My Travel Planner
           </span>
           <br />
-          <span className="Introduce_text text-xl border-2 border-white text-left mt-2 p-1 pl-24 font-gothicA1 font-semibold">
-            당신의 꿈을 현실로 만드는 특별한 계획, 지금 시작하세요!
+          <span className="Introduce_text lg:text-2xl i13:text-base border-2 text-center border-white  lg:mt-2 p-1  font-gothicA1 font-semibold ">
+            당신의 꿈을 현실로 만드는 특별한 계획,
+            <br /> 지금 시작하세요!
           </span>
         </p>
       </div>
-      <div className="Sub_link_container m-1 mt-20 h-1/3 flex flex-col items-center">
-        <div className="Sub_link_wrapper flex flex-col justify-center items-center space-y-8 w-2/3">
-          <div className="map p-3 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110">
+      <div className="Sub_link_container m-1  h-1/3 flex flex-col items-center ">
+        <div className="Sub_link_wrapper flex flex-col justify-center items-center lg:space-y-8 i13:space-y-2 lg:w-2/3 i13:w-5/6">
+          <div className="map lg:p-3 i13:p-1 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110 ">
             <Link
               to="/map"
               className="w-full block h-full text-inherit no-underline text-white"
@@ -44,7 +45,7 @@ const Sidebar = () => {
               여행 지도
             </Link>
           </div>
-          <div className="planner p-3 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110">
+          <div className="planner lg:p-3 i13:p-1 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110">
             <Link
               to="/calendarpage"
               className="w-full block h-full text-inherit no-underline text-white"
@@ -53,7 +54,7 @@ const Sidebar = () => {
               여행 계획하기
             </Link>
           </div>
-          <div className="project p-3 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110">
+          <div className="project lg:p-3 i13:p-1 text-xl w-full text-center bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg transform transition duration-300 hover:scale-110">
             <Link
               to="/travelproject"
               className="w-full block h-full text-inherit no-underline text-white"

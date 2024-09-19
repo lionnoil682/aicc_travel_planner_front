@@ -50,7 +50,7 @@ const Favorite = () => {
       <div className="sidebar-wrapper h-full flex flex-col">
         <div className="bg-white p-4 rounded-lg shadow-custom h-full">
           <div className="Favorite_title text-2xl text-center flex justify-center mt-2 border-t border-b p-1">
-            <div className="shadow-md font-bold p-2 rounded-md   w-1/4 ">
+            <div className="shadow-md font-bold p-2 rounded-md w-1/4">
               추천 여행 명소
             </div>
           </div>

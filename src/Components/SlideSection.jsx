@@ -50,7 +50,7 @@ const SlideSection = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className="SlideSection_container flex flex-col items-center mt-10 mb-10 relative">
+    <div className="SlideSection_container flex flex-col items-center mt-10 mb-10 relative ">
       <Swiper
         loop={true} // 루프 설정
         speed={1500}
@@ -70,8 +70,8 @@ const SlideSection = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className="flex justify-center items-center">
-            <div className="w-4/5 flex">
-              <div className="w-[50%]">
+            <div className="w-4/5 lg:flex ">
+              <div className="lg:w-[50%] i13:w-full">
                 <img
                   src={image.src}
                   alt={image.title}
@@ -79,9 +79,9 @@ const SlideSection = () => {
                   style={{ aspectRatio: '16/9' }}
                 />
               </div>
-              <div className="w-[50%] flex flex-col items-start justify-center p-4 ml-8">
+              <div className="lg:w-[50%] flex flex-col items-start justify-center p-4 lg:ml-8 ">
                 {image.title && (
-                  <h2 className="text-2xl font-bold mb-8 text-left text-gray-800">
+                  <h2 className="lg:text-2xl i13:text-sm  font-bold mb-8  text-gray-800 lg:text-left i13:text-center  w-full">
                     {image.title}
                   </h2>
                 )}
