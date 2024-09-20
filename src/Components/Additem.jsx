@@ -14,13 +14,13 @@ const Additem = () => {
       {/* h-screen을 제거하고, 상위 요소의 높이를 줄여 더 위로 배치 */}
       <div className="w-full px-2">
         <div className="Additem_wrapper w-full h-auto p-[0.25rem]">
-          <div className="Additem_container w-full h-full flex items-center justify-center mt-0 rounded-md text-4xl font-semibold">
+          <div className="Additem_container w-full h-full flex items-center justify-center rounded-md lg:text-4xl font-semibold">
             <button
               className="flex items-center gap-x-2 group"
               onClick={handleOpenModal}
             >
-              <div className="border border-gray-500 rounded-md flex gap-2 p-3 mt-10">
-                <GoPlusCircle />
+              <div className="border border-gray-500 rounded-md flex gap-2 p-3 lg:mt-10 i13:mt-4">
+                <GoPlusCircle className="plus_button lg:w-8 lg:h-10" />
                 여행 목록 추가하기
               </div>
             </button>

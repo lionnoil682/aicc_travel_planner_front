@@ -113,12 +113,12 @@ const Createplanner = () => {
         <Navbar />
         <div className="flex flex-1">
           <Sidebar />
-          <div className="fixed inset-0 bg-white bg-opacity-100 z-999"></div>
-          <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center z-50">
-            <div className="w-[45%] h-[60%] bg-white rounded-3xl shadow-lg border border-gray-700">
-              <div className="input-wrapper bg-gray-100 shadow-lg rounded-3xl flex flex-col w-full h-full items-center gap-1 ">
+          <div className="fixed inset-0 bg-white bg-opacity-100 z-999 "></div>
+          <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center z-50 i13:h-[69%] lg:h-full">
+            <div className="createplanner_wrapper w-[45%] h-[60%] bg-white rounded-3xl shadow-lg border border-gray-700">
+              <div className="input-wrapper bg-gray-100 shadow-lg rounded-3xl flex flex-col w-full lg:h-full items-center gap-1 ">
                 <div className="flex w-[90%]">
-                  <div className="top w-full p-2 font-bold text-4xl flex justify-between mt-6 ">
+                  <div className="planner_top w-full p-2 font-bold text-4xl flex justify-between mt-6 ">
                     <div className="flex items-center rounded-md">
                       <TfiWrite className="mr-2" />
                       <p>My Travel Planner</p>
@@ -129,28 +129,28 @@ const Createplanner = () => {
                   </div>
                 </div>
 
-                <div className="middle h-5/6 flex w-full justify-center items-center">
-                  <div className="w-full flex gap-7 items-center justify-center">
-                    <div className="flex flex-col items-start space-y-11 ">
-                      <div className=" w-[100%] rounded-md text-2xl font-bold text-right p-3">
+                <div className="planner_middle h-full flex w-full justify-center items-center">
+                  <div className="planner_middle_wrapper w-full flex lg:gap-7 i13:gap-2 items-center justify-center h-full ">
+                    <div className="flex flex-col items-start i13:space-y-4 lg:space-y-11 ">
+                      <div className=" w-[100%] rounded-md lg:text-2xl lg:font-bold i13:text-sm text-right p-3">
                         제목
                       </div>
-                      <div className=" w-[100%] rounded-md text-2xl font-bold text-right p-3">
+                      <div className=" w-[100%] rounded-md lg:text-2xl lg:font-bold i13:text-sm text-right p-3">
                         시작 날짜
                       </div>
-                      <div className=" w-[100%] rounded-md text-2xl font-bold text-right p-3">
+                      <div className=" w-[100%] rounded-md lg:text-2xl lg:font-bold i13:text-sm text-right p-3">
                         마지막 날짜
                       </div>
                     </div>
-                    <div className="flex flex-col items-start w-[65%] space-y-10">
+                    <div className="flex flex-col items-start w-[65%] lg:space-y-10 i13:space-y-3 ">
                       <input
                         type="text"
                         id="projectTitle"
                         name="projectTitle"
                         placeholder="제목을 입력해주세요."
-                        value={projectTitle} // 입력된 제목을 상태에서 가져옴
-                        onChange={handleChange} // 제목 입력 시 상태 업데이트
-                        className="Logo_text bg-white w-full rounded-md text-gray-600 input-placeholder p-3 border border-slate-300"
+                        value={projectTitle}
+                        onChange={handleChange}
+                        className="Logo_text bg-white lg:w-full lg:h-auto i13:w-[100%] i13:h-12 rounded-md text-gray-600 input-placeholder p-3 border border-slate-300 "
                       />
                       <input
                         type="date"
@@ -158,7 +158,7 @@ const Createplanner = () => {
                         name="startDate"
                         value={startDate}
                         onChange={handleDateChange}
-                        className="Logo_text bg-white w-full rounded-md p-3 border border-slate-300"
+                        className="Logo_text bg-white lg:w-full lg:h-auto i13:w-[100%] i13:h-12 rounded-md p-3 border border-slate-300"
                       />
                       <input
                         type="date"
@@ -166,13 +166,13 @@ const Createplanner = () => {
                         name="endDate"
                         value={endDate}
                         onChange={handleDateChange}
-                        className="Logo_text bg-white w-full rounded-md p-3 border border-slate-300"
+                        className="Logo_text bg-white lg:w-full lg:h-auto i13:w-[100%] i13:h-12 rounded-md p-3 border border-slate-300"
                       />
                     </div>
                   </div>
                 </div>
-                <form className="w-full h-1/6 Logo_text flex flex-col justify-between">
-                  <div className="sub-btn h-full flex justify-end pt-4 p-6 mr-6">
+                <form className="w-full h-1/6 Logo_text flex flex-col justify-between ">
+                  <div className="sub-btn h-full flex justify-end lg:pt-4 p-6 lg:mr-6 ">
                     <button
                       onClick={handleSave}
                       type="button"

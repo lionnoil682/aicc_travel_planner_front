@@ -8,10 +8,12 @@ const index = () => {
   return (
     <div className="Planner_wrapper flex flex-col h-screen bg-white">
       <Navbar />
-      <div className="flex p-4">
+      <div className="flex p-4 h-full">
         <PlannerBar />
       </div>
-      <Footer />
+      <div className="bottom-0 w-full">
+        <Footer />
+      </div>
     </div>
   );
 };

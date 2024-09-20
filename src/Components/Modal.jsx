@@ -139,10 +139,10 @@ const Modal = ({ handleSave }) => {
   return (
     <>
       <div className="Modal_page fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center z-50">
-        <div className="Modal_wrapper w-[55%] h-[70%] bg-gray-100 rounded-md shadow-lg border border-gray-700 flex flex-col">
+        <div className="Modal_wrapper lg:w-[60%] lg:h-[72%] bg-gray-100 rounded-md shadow-lg border border-gray-700 flex flex-col">
           <div className="flex w-full">
             <div className="Modal_container w-full flex flex-col px-3 ">
-              <div className="top w-full text-center p-4 font-bold text-4xl flex justify-between">
+              <div className="top w-full text-center p-4 font-bold text-4xl flex justify-between ">
                 <div className="flex items-center rounded-md">
                   <TfiWrite className="mr-2" />
                   <p>My Travel Planner</p> {/* 타이틀 */}
@@ -154,7 +154,7 @@ const Modal = ({ handleSave }) => {
                   <MdClose className="Logo_image_svg hover:bg-slate-300 rounded-md" />
                 </button>
               </div>
-              <div className="location border rounded-md border-gray-400 bg-white mb-4 p-4 w-full h-1/6 flex justify-center items-center">
+              <div className="location border rounded-md border-gray-400 bg-white mb-4 p-4 w-full h-1/6 flex justify-center items-center ">
                 <div className="input-control  w-full h-full ">
                   <label htmlFor="planner_title" className="w-full h-full">
                     <input
@@ -169,8 +169,8 @@ const Modal = ({ handleSave }) => {
                   </label>
                 </div>
               </div>
-              <div className="content  h-1/2 mb-10 flex gap-2">
-                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-80 flex items-center justify-center relative overflow-hidden">
+              <div className="content mb-10 flex gap-2 ">
+                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 lg:h-80 flex items-center justify-center relative overflow-hidden">
                   {imagePreview ? (
                     <img
                       src={imagePreview}
@@ -189,7 +189,7 @@ const Modal = ({ handleSave }) => {
                     className="absolute inset-0 opacity-0 cursor-pointer"
                   />
                 </div>
-                <div className="text border rounded-md border-gray-400  w-1/2 h-80 flex justify-center items-center ">
+                <div className="text border rounded-md border-gray-400  w-1/2 lg:h-80 flex justify-center items-center ">
                   <div className="input-control w-full h-full ">
                     <label
                       htmlFor="planner_description"
@@ -209,8 +209,8 @@ const Modal = ({ handleSave }) => {
                   </div>
                 </div>
               </div>
-              <div className="date border rounded-md border-gray-400 w-full h-16 flex justify-center items-center">
-                <div className="input-control w-full h-full flex items-center justify-center">
+              <div className="date border rounded-md border-gray-400 w-full h-16 flex justify-center items-center ">
+                <div className="input-control w-full h-full flex items-center justify-center ">
                   <input
                     type="datetime-local"
                     id="planner_date"

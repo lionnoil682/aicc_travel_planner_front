@@ -126,8 +126,8 @@ const PlannerBar = () => {
   );
 
   return (
-    <div className="flex h-full p-4">
-      <div className="w-1/3 p-4 border-gray-300">
+    <div className="plannerbar_wrapper flex w-full h-full p-4">
+      <div className="lg:w-1/3 p-4 border-gray-300">
         <div className="bg-white p-4 rounded-lg shadow-custom ">
           <h2 className="text-xl w-full font-bold flex justify-between mb-4 pl-1">
             {authData.name}님 여행 계획
@@ -186,17 +186,17 @@ const PlannerBar = () => {
         </div>
       </div>
 
-      <div className="w-2/3  p-4 border-l h-full">
+      <div className="lg:w-2/3 p-4 border-l h-full">
         <div className="bg-white rounded-lg shadow-custom h-full flex flex-col justify-start">
-          <h2 className=" text-2xl tracking-wide mt-2 font-bold text-center items-center justify-center flex">
-            <p className="shadow-md font-bold p-1 rounded-md bg-gradient-to-r from-gray-600 to-gray-800 w-1/4 text-white">
+          <h2 className=" text-2xl tracking-wide mt-2 font-bold text-center items-center justify-center flex ">
+            <p className="shadow-md font-bold p-1 rounded-md bg-gradient-to-r from-gray-600 to-gray-800 lg:w-1/4 text-white">
               <div className=" text-white">{authData.name}님 여행 정보</div>
             </p>
             {isOpen && <Modal handleSave={handleSave} />}
           </h2>
 
           {hasValidData ? (
-            <div className="mt-4 flex flex-wrap justify-center items-center ">
+            <div className="mt-4 flex flex-wrap justify-center items-center h-full w-full">
               {visibleItems.map((item, index) =>
                 item.planner_title ||
                 item.planner_description ||
@@ -204,17 +204,17 @@ const PlannerBar = () => {
                 item.planner_img ? (
                   <div
                     key={index}
-                    className="bg-gray-100 p-4 rounded-lg shadow-lg w-[80%] h-[62vh] flex flex-col justify-around mx-[1.66%] relative border border-gray-400 "
+                    className="bg-gray-100 p-4 rounded-lg shadow-lg w-[70%] flex flex-col  mx-[1.66%] relative border border-gray-400 mb-4 "
                   >
-                    <div className="bg-gray-400 shadow-xl rounded-xl overflow-hidden h-[95%] w-full mx-auto p-1">
-                      <div className="bg-gray-100 text-gray-600 py-4 px-4 rounded-lg mb-1">
-                        <h3 className="text-xl font-semibold">
+                    <div className="bg-gray-400 shadow-xl rounded-xl overflow-hidden lg:h-[98%] w-full mx-auto p-1">
+                      <div className="bg-gray-100 text-gray-600 lg:p-4 i13:p-1 rounded-lg mb-1">
+                        <h3 className="lg:text-xl font-semibold text-center">
                           {item.planner_title ||
                             '프로젝트 제목을 입력해주세요...'}
                         </h3>
                       </div>
                       <div className="flex mb-1 space-x-1">
-                        <div className="bg-gray-100 flex-1 flex justify-center items-center rounded-lg min-h-[390px] max-h-[390px]">
+                        <div className="bg-gray-100 flex-1 flex justify-center items-center rounded-lg lg:min-h-[384px] lg:max-h-[384px]">
                           {item.planner_img ? (
                             <img
                               src={item.planner_img}
@@ -228,15 +228,15 @@ const PlannerBar = () => {
                           )}
                         </div>
                         <div
-                          className="bg-gray-100 flex-1 flex items-center rounded-lg p-1 min-h-[260px] max-w-[470px]  overflow-y-scroll"
-                          style={{ height: 390 }}
+                          className="bg-gray-100 flex-1 flex items-center rounded-lg p-1 lg:min-h-[260px] lg:max-w-[470px]  overflow-y-scroll justify-center"
+                          // style={{ height: 390 }}
                         >
                           <p
-                            className="text-gray-600 text-xl text-left font-semibold"
+                            className="text-gray-600 lg:text-xl i13:text-xs font-semibold"
                             style={{
                               whiteSpace: 'pre-wrap',
                               wordBreak: 'break-word',
-                              height: '364.3px',
+                              // height: '364.3px',
                             }}
                           >
                             {item.planner_description ||
@@ -244,29 +244,28 @@ const PlannerBar = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="bg-gray-100 text-gray-600 py-4 px-6 rounded-lg flex items-center justify-between">
-                        <p className="text-xl font-semibold">
+                      <div className="bg-gray-100 text-gray-600 p-2 rounded-lg flex justify-between">
+                        <div className="lg:text-xl i13:text-xs font-semibold  w-2/3 text-center lg:pt-3 i13:pt-2">
                           📅&ensp;
                           {item.planner_date
                             ? new Date(item.planner_date).toLocaleDateString(
                                 'ko-KR'
                               )
                             : '날짜 없음'}
-                        </p>
+                        </div>
 
-                        {/* 기존 수정 및 삭제 버튼 */}
-                        <div className="absolute right-8 flex space-x-2">
+                        <div className="w-1/3 flex justify-end bg-gray-100 text-gray-600 p-1">
                           <button
-                            className="bg-gray-500 hover:bg-gray-400 text-white p-1 rounded"
+                            className=" p-1 rounded"
                             onClick={() => handleEdit(item)}
                           >
-                            수정
+                            <CiEdit className="lg:w-8 lg:h-9" />
                           </button>
                           <button
-                            className="bg-gray-800 hover:bg-gray-700 text-white p-1 rounded"
+                            className=" p-1 rounded"
                             onClick={() => handleDelete(item)}
                           >
-                            삭제
+                            <AiOutlineDelete className="lg:w-7 lg:h-9" />
                           </button>
                         </div>
                       </div>
@@ -276,7 +275,7 @@ const PlannerBar = () => {
               )}
             </div>
           ) : (
-            <div className="flex justify-center items-center flex-col mt-24">
+            <div className="flex justify-center items-center flex-col lg:mt-36">
               <Additem handleSave={handleSave} />
             </div>
           )}

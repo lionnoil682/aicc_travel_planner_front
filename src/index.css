@@ -51,8 +51,8 @@ body {
 }
 
 .Logo_text {
-  font-size: 1.6rem; /* text-l */
-  font-weight: 600; /* font-semibold */
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .Sign_box_container {
@@ -129,7 +129,7 @@ body {
 }
 
 .input-placeholder::placeholder {
-  font-weight: bold; /* Make placeholder text bold */
+  font-weight: bold;
   color: #868e96;
 }
 
@@ -222,5 +222,57 @@ body {
     justify-content: center;
     align-items: center;
     padding-right: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .createplanner_wrapper {
+    width: 350px;
+    height: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .planner_top {
+    font-size: larger;
+  }
+}
+
+@media (max-width: 400px) {
+  .Logo_text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 400px) {
+  .plannerbar_wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .plus_button {
+    width: 1.4rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .Modal_wrapper {
+    width: 80%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .input-control {
+    font-size: small;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    height: 14rem;
   }
 }
