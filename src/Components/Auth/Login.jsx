@@ -57,7 +57,7 @@ const Login = () => {
         {/* Header Text */}
         <h1
           onClick={handleHomeClick}
-          className="text-5xl font-bold cursor-pointer from-gray-700 to-gray-900  mb-12"
+          className="lg:text-5xl font-bold cursor-pointer from-gray-700 to-gray-900  mb-12"
         >
           My Travel Planner
         </h1>

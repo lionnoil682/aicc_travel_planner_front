@@ -50,7 +50,7 @@ const Register = () => {
         {/* Header Text */}
         <h1
           onClick={() => navigate('/')}
-          className="text-5xl font-bold from-gray-700 to-gray-900 cursor-pointer mb-12 mt-12"
+          className="lg:text-5xl font-bold from-gray-700 to-gray-900 cursor-pointer mb-12 mt-12"
         >
           My Travel Planner
         </h1>
