@@ -16,7 +16,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="bottom-0 w-full">
+      <div className="lg:fixed bottom-0 w-full">
         <Footer />
       </div>
     </div>
