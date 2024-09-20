@@ -1,4 +1,4 @@
-H1:Travel Planner Page
+# Travel Planner Page
 
 - 여행 플레너 페이지 구축
  - 달력 페이지, 플레너 페이지, 명소 추천 페이지 구현
