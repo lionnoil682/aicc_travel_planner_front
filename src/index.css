@@ -200,6 +200,7 @@ body {
 @media (max-width: 400px) {
   .calender_page_middle {
     flex-direction: column;
+    gap: 1rem;
   }
 }
 

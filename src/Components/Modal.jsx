@@ -139,7 +139,7 @@ const Modal = ({ handleSave }) => {
   return (
     <>
       <div className="Modal_page fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center z-50">
-        <div className="Modal_wrapper lg:w-[60%] lg:h-[72%] bg-gray-100 rounded-md shadow-lg border border-gray-700 flex flex-col">
+        <div className="Modal_wrapper lg:w-[50%] lg:h-auto bg-gray-100 rounded-md shadow-lg border border-gray-700 flex flex-col">
           <div className="flex w-full">
             <div className="Modal_container w-full flex flex-col px-3 ">
               <div className="top w-full text-center p-4 font-bold text-4xl flex justify-between ">
@@ -169,7 +169,7 @@ const Modal = ({ handleSave }) => {
                   </label>
                 </div>
               </div>
-              <div className="content mb-10 flex gap-2 ">
+              <div className="content mb-2 flex gap-2 ">
                 <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 lg:h-80 flex items-center justify-center relative overflow-hidden">
                   {imagePreview ? (
                     <img

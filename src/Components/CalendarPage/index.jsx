@@ -9,8 +9,8 @@ const index = () => {
     <div className="Page_Wrapper flex flex-col bg-white">
       <Navbar />
       <div className="Page_container h-full flex flex-col">
-        <div className="flex items-start justify-center mt-20 mb-16">
-          <div className="calender_page_middle w-full flex h-full">
+        <div className="flex items-start justify-center lg:mt-32 mb-12">
+          <div className="calender_page_middle w-full flex h-full ">
             <Sidebar />
             <Calendar />
           </div>
