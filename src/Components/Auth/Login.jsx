@@ -54,10 +54,9 @@ const Login = () => {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow p-4">
-        {/* Header Text */}
         <h1
           onClick={handleHomeClick}
-          className="lg:text-5xl font-bold cursor-pointer from-gray-700 to-gray-900  mb-12"
+          className="lg:text-5xl i13:text-3xl font-bold cursor-pointer from-gray-700 to-gray-900 lg:mb-12 i13:mb-2 lg:mt-12"
         >
           My Travel Planner
         </h1>
